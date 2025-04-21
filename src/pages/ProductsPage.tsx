@@ -228,43 +228,6 @@ const categoryTitles = {
   "bao-hiem-an-ninh-mang-15": "BẢO HIỂM AN NINH MẠNG",
 };
 
-// Category subtitles
-const categorySubtitles = {
-  "bao-hiem-o-to-9": "An tâm trên mọi nẻo đường!",
-  "bao-hiem-xe-may-10": "Bảo vệ mọi hành trình của bạn",
-  "bao-hiem-suc-khoe-11": "Chăm sóc sức khỏe toàn diện",
-  "bao-hiem-du-lich-13": "Đồng hành cùng mọi chuyến đi",
-  "bao-hiem-tai-nan-12": "Bảo vệ trước những rủi ro không lường trước",
-  "bao-hiem-nha-tu-nhan-14": "Bảo vệ tổ ấm của bạn",
-  "bao-hiem-an-ninh-mang-15": "An toàn trong thời đại số",
-};
-
-// Category features
-const categoryFeatures = {
-  "bao-hiem-o-to-9": [
-    "Bảo hiểm TNDS bắt buộc của chủ xe ô tô",
-    "Bảo hiểm vật chất xe ô tô",
-  ],
-  "bao-hiem-xe-may-10": [
-    "Bảo hiểm TNDS bắt buộc của chủ xe máy",
-    "Bảo hiểm tai nạn người ngồi trên xe",
-  ],
-  "bao-hiem-suc-khoe-11": [
-    "Bảo hiểm sức khỏe toàn diện",
-    "Bảo hiểm bệnh hiểm nghèo",
-  ],
-  "bao-hiem-du-lich-13": [
-    "Bảo hiểm du lịch trong nước",
-    "Bảo hiểm du lịch quốc tế",
-  ],
-  "bao-hiem-tai-nan-12": ["Bảo hiểm tai nạn 24/24", "Bảo hiểm tai nạn cá nhân"],
-  "bao-hiem-nha-tu-nhan-14": ["Bảo hiểm cháy nổ", "Bảo hiểm thiên tai"],
-  "bao-hiem-an-ninh-mang-15": [
-    "Bảo vệ dữ liệu cá nhân",
-    "Bảo vệ trước các cuộc tấn công mạng",
-  ],
-};
-
 export default function ProductsPage() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [products, setProducts] = useState<ProductCardProps[]>([]);

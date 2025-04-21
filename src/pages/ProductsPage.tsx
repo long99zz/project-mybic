@@ -20,20 +20,12 @@ interface ProductCardProps {
   id: number;
   image: string;
   title: string;
-  description?: string;
-  features?: string[];
   detailUrl: string;
   buyUrl?: string;
 }
 
 // Cập nhật component ProductCard để tăng kích thước chiều ngang và căn trái nội dung
-const ProductCard = ({
-  image,
-  title,
-  description,
-  detailUrl,
-  buyUrl,
-}: ProductCardProps) => {
+const ProductCard = ({ image, title, detailUrl, buyUrl }: ProductCardProps) => {
   return (
     <div className="bg-white p-6 rounded-md shadow-sm mb-6 border border-gray-200 w-full">
       <div className="flex items-center">
@@ -126,7 +118,6 @@ const productsByCategory = {
       id: 1,
       image: "/products/bic-tnds-oto.png?height=200&width=300",
       title: "Bảo hiểm trách nhiệm dân sự chủ xe ô tô",
-      description: "TNDS ô tô - Bảo hiểm trách nhiệm dân sự của chủ xe ô tô",
       detailUrl: "/san-pham/bao-hiem-trach-nhiem-dan-su-chu-xe-o-to",
       buyUrl: "/mua-bao-hiem/bao-hiem-o-to/tnds-bat-buoc",
     },
@@ -134,7 +125,6 @@ const productsByCategory = {
       id: 2,
       image: "/products/vc-oto.png?height=200&width=300",
       title: "Bảo hiểm vật chất ô tô",
-      description: "Bảo vệ toàn diện cho xe của bạn trước mọi rủi ro",
       detailUrl: "/san-pham/bao-hiem-vat-chat-o-to",
       buyUrl: "/mua-bao-hiem/bao-hiem-o-to/vat-chat-xe",
     },
@@ -144,7 +134,6 @@ const productsByCategory = {
       id: 3,
       image: "/placeholder.svg?height=200&width=300",
       title: "Bảo hiểm TNDS bắt buộc xe máy",
-      description: "Bảo hiểm trách nhiệm dân sự của chủ xe máy",
       detailUrl: "/san-pham/bao-hiem-tnds-xe-may",
       buyUrl: "/mua-bao-hiem/bao-hiem-xe-may/tnds-bat-buoc",
     },
@@ -154,7 +143,6 @@ const productsByCategory = {
       id: 4,
       image: "/placeholder.svg?height=200&width=300",
       title: "Bảo hiểm sức khỏe và tai nạn cá nhân BIC Tâm An",
-      description: "Chăm sóc sức khỏe toàn diện cho bạn và gia đình",
       detailUrl: "/san-pham/bao-hiem-suc-khoe-tam-an",
       buyUrl: "/mua-bao-hiem/bao-hiem-suc-khoe/bic-tam-an",
     },
@@ -162,7 +150,6 @@ const productsByCategory = {
       id: 5,
       image: "/placeholder.svg?height=200&width=300",
       title: "Bảo hiểm bệnh ung thư BIC Phúc Tâm An",
-      description: "Bảo vệ tài chính trước nguy cơ mắc bệnh ung thư",
       detailUrl: "/san-pham/bao-hiem-benh-ung-thu-phuc-tam-an",
       buyUrl: "/mua-bao-hiem/bao-hiem-suc-khoe/bic-phuc-tam-an",
     },
@@ -172,7 +159,6 @@ const productsByCategory = {
       id: 6,
       image: "/placeholder.svg?height=200&width=300",
       title: "Bảo hiểm du lịch quốc tế (ITI)",
-      description: "Bảo vệ toàn diện cho chuyến du lịch nước ngoài",
       detailUrl: "/san-pham/bao-hiem-du-lich-quoc-te",
       buyUrl: "/mua-bao-hiem/bao-hiem-du-lich/quoc-te",
     },
@@ -180,7 +166,6 @@ const productsByCategory = {
       id: 7,
       image: "/placeholder.svg?height=200&width=300",
       title: "Bảo hiểm du lịch trong nước (TRV)",
-      description: "An tâm tận hưởng chuyến đi trong nước",
       detailUrl: "/san-pham/bao-hiem-du-lich-trong-nuoc",
       buyUrl: "/mua-bao-hiem/bao-hiem-du-lich/trong-nuoc",
     },
@@ -188,7 +173,6 @@ const productsByCategory = {
       id: 8,
       image: "/placeholder.svg?height=200&width=300",
       title: "BIC TRAVEL CARE\nBảo hiểm tai nạn khách du lịch (TVC)",
-      description: "Bảo vệ khách du lịch trước rủi ro tai nạn",
       detailUrl: "/san-pham/bao-hiem-tai-nan-khach-du-lich",
       buyUrl: "/mua-bao-hiem/bao-hiem-du-lich/tai-nan-khach-du-lich",
     },
@@ -198,7 +182,6 @@ const productsByCategory = {
       id: 9,
       image: "/placeholder.svg?height=200&width=300",
       title: "Bảo hiểm tai nạn 24/24",
-      description: "Bảo vệ bạn trước những rủi ro không lường trước",
       detailUrl: "/san-pham/bao-hiem-tai-nan-24-24",
       buyUrl: "/mua-bao-hiem/bao-hiem-tai-nan/24-24",
     },
@@ -208,7 +191,6 @@ const productsByCategory = {
       id: 10,
       image: "/placeholder.svg?height=200&width=300",
       title: "Bảo hiểm toàn diện nhà tư nhân",
-      description: "Bảo vệ tổ ấm của bạn trước mọi rủi ro",
       detailUrl: "/san-pham/bao-hiem-toan-dien-nha-tu-nhan",
       buyUrl: "/mua-bao-hiem/bao-hiem-nha-tu-nhan/toan-dien",
     },
@@ -218,7 +200,6 @@ const productsByCategory = {
       id: 11,
       image: "/placeholder.svg?height=200&width=300",
       title: "Bảo hiểm an ninh mạng",
-      description: "Bảo vệ bạn trước các rủi ro trong thời đại số",
       detailUrl: "/san-pham/bao-hiem-an-ninh-mang",
       buyUrl: "/mua-bao-hiem/bao-hiem-an-ninh-mang/ca-nhan",
     },
@@ -288,8 +269,6 @@ export default function ProductsPage() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [products, setProducts] = useState<ProductCardProps[]>([]);
   const [categoryTitle, setCategoryTitle] = useState("Sản phẩm");
-  const [categorySubtitle, setCategorySubtitle] = useState("");
-  const [categoryFeatureList, setCategoryFeatureList] = useState<string[]>([]);
   const [bannerImage, setBannerImage] = useState(
     "/placeholder.svg?height=400&width=1920"
   );
@@ -320,15 +299,6 @@ export default function ProductsPage() {
           categoryTitles[foundCategory.id as keyof typeof categoryTitles] ||
             "Sản phẩm"
         );
-        setCategorySubtitle(
-          categorySubtitles[
-            foundCategory.id as keyof typeof categorySubtitles
-          ] || ""
-        );
-        setCategoryFeatureList(
-          categoryFeatures[foundCategory.id as keyof typeof categoryFeatures] ||
-            []
-        );
         setBannerImage(
           categoryBanners[foundCategory.id as keyof typeof categoryBanners] ||
             "/placeholder.svg?height=400&width=1920"
@@ -339,8 +309,6 @@ export default function ProductsPage() {
         const allProducts = Object.values(productsByCategory).flat();
         setProducts(allProducts);
         setCategoryTitle("Sản phẩm");
-        setCategorySubtitle("");
-        setCategoryFeatureList([]);
         setBannerImage("/placeholder.svg?height=400&width=1920");
       }
     } else {
@@ -349,8 +317,6 @@ export default function ProductsPage() {
       const allProducts = Object.values(productsByCategory).flat();
       setProducts(allProducts);
       setCategoryTitle("Sản phẩm");
-      setCategorySubtitle("");
-      setCategoryFeatureList([]);
       setBannerImage("/placeholder.svg?height=400&width=1920");
     }
   }, [params.category]);
@@ -376,9 +342,6 @@ export default function ProductsPage() {
               <div className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-16 h-1 bg-red-600"></div>
             </h2>
           </div>
-
-          {/* Cập nhật phần render của container bên phải để đảm bảo chiều cao lớn nhất */}
-          {/* Thay đổi đoạn code sau trong hàm return của component ProductsPage: */}
 
           {/* Thay thế phần container chính với flex-col và flex-row */}
           <div className="flex flex-col md:flex-row gap-8 min-h-[600px]">
@@ -429,7 +392,6 @@ export default function ProductsPage() {
                         id={product.id}
                         image={product.image}
                         title={product.title}
-                        description={product.description}
                         detailUrl={product.detailUrl}
                         buyUrl={product.buyUrl}
                       />
